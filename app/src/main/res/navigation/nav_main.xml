@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.forextimetestapp.ui.list.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_listFragment_to_tradingPairFragment"
+            app:destination="@id/tradingPairFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tradingPairFragment"
+        android:name="com.forextimetestapp.ui.detail.TradingPairFragment"
+        android:label="fragment_trading_pair"
+        tools:layout="@layout/fragment_trading_pair" />
+
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.forextimetestapp.ui.favourite.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_tradingPairFragment"
+            app:destination="@id/tradingPairFragment" />
+    </fragment>
+</navigation>
